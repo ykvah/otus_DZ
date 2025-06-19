@@ -71,3 +71,37 @@ Record the first IP address in the Addressing Table for R2 G0/0/1.
 ТК на R1 G0/0/1 нет ип пропингуем ПК-А и G0/0/0 на R1
 ![3](https://github.com/user-attachments/assets/70894b02-7e61-4ccd-88c6-69929ba6267d)
 
+
+
+# v6
+## Топология 
+Порты изменены в соответствии с нумерацией доступной в EVE
+А также VPCS на устройства получающие ipv6
+
+![image](https://github.com/user-attachments/assets/a01b31b7-67ed-4a83-b335-2e356a07647b)
+
+## 1 Базовые настройки 
+![1-2 3](https://github.com/user-attachments/assets/0c6a0fac-c357-466d-b2c1-67e78f99e9d3)
+
+И проверка
+![1-4](https://github.com/user-attachments/assets/877edd87-f6c9-47e0-9355-22e010c8802c)
+
+
+## 2 Проверка назначения адресов с R1
+host-id в данном случае SLAAC получается из мака устройства
+![2](https://github.com/user-attachments/assets/6584fa5b-13c4-46ac-b97f-b9815c78c3ab)
+
+
+## 3 Настройка DHCPv6 на R1
+![3](https://github.com/user-attachments/assets/a49838d3-9126-4e49-8473-c42bf3e64c55)
+
+## 4 Настройка DHCPv6 сервера на R1
+![4](https://github.com/user-attachments/assets/a00dd2ee-2cc7-4059-a0aa-15db59392b58)
+
+## 5 Настройка ретрансляции на R2 
+![5-2](https://github.com/user-attachments/assets/02bd0480-efa7-4ddb-8bb3-04442f957442)
+
+Проверка
+![5-3](https://github.com/user-attachments/assets/851bd442-e9f1-4492-bcd9-4827231feb11)
+
+
