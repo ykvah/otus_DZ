@@ -76,6 +76,7 @@ Record the first IP address in the Addressing Table for R2 G0/0/1.
 # v6
 ## Топология 
 Порты изменены в соответствии с нумерацией доступной в EVE
+
 А также VPCS на устройства получающие ipv6
 
 ![image](https://github.com/user-attachments/assets/a01b31b7-67ed-4a83-b335-2e356a07647b)
