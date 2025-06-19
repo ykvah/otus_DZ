@@ -63,5 +63,6 @@ Record the first IP address in the Addressing Table for R2 G0/0/1.
 
 ### 3 Конфиг R2
 
+ТК на R1 G0/0/1 нет ип пропингуем ПК-А и G0/0/0 на R1
 ![3](https://github.com/user-attachments/assets/70894b02-7e61-4ccd-88c6-69929ba6267d)
 
