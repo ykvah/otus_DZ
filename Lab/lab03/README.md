@@ -85,6 +85,7 @@ Record the first IP address in the Addressing Table for R2 G0/0/1.
 ![1-2 3](https://github.com/user-attachments/assets/0c6a0fac-c357-466d-b2c1-67e78f99e9d3)
 
 И проверка
+
 ![1-4](https://github.com/user-attachments/assets/877edd87-f6c9-47e0-9355-22e010c8802c)
 
 
@@ -103,6 +104,7 @@ host-id в данном случае SLAAC получается из мака у
 ![5-2](https://github.com/user-attachments/assets/02bd0480-efa7-4ddb-8bb3-04442f957442)
 
 Проверка
+
 ![5-3](https://github.com/user-attachments/assets/851bd442-e9f1-4492-bcd9-4827231feb11)
 
 
