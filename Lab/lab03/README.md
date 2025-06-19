@@ -32,6 +32,9 @@ Type your answers here.
 Record the first IP address in the Addressing Table for R2 G0/0/1.
 #### 192.168.1.97
 
+
+
+
 Далее базовые настройки
 
 ### 3
