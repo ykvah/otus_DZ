@@ -41,10 +41,8 @@ Vlan - 192.168.номер влан.номер коммутатора
 
 ## МСК
 
-Loopback	Порт	VLAN	IP 
-R20	0/0		10.10.20.0
-10.0.0.20	Управление	45	192.168.45.20
-![image](https://github.com/user-attachments/assets/2ca84373-992a-434b-8cd2-31512b36ebf4)
+![image](https://github.com/user-attachments/assets/5e29212a-bcb6-4ee8-8b25-aed42f3eeef4)
+
 
 
 
