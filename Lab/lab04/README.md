@@ -78,6 +78,8 @@ interface Vlan10
  standby 1 priority 110
  
  standby 1 preempt
+
+ 
  
 interface Vlan20
 
@@ -97,6 +99,8 @@ ip address 192.168.10.5 255.255.255.0
 standby 1 ip 192.168.10.1
 
 standby 1 preempt
+
+
 
 interface Vlan20
 
