@@ -96,9 +96,8 @@ Loopback - 10.42.0.xx/32
 <details>
 <img width="558" height="862" alt="ip11" src="https://github.com/user-attachments/assets/e55b64a1-211a-49e4-a365-437b821afb9f" />
 
-Адресацию между ACC убрал, но на картинке осталась.
 
-<img width="1108" height="635" alt="ip3" src="https://github.com/user-attachments/assets/17ab43a4-83a1-4c5b-899c-0df424af8257" />
+<img width="1108" height="635" alt="ip3" src="https://github.com/user-attachments/assets/7da115db-6da3-4a3e-9a40-895643b38485" />
 
 </details>
 
