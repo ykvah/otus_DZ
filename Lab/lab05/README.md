@@ -16,7 +16,7 @@
 <img width="879" height="428" alt="сх+ip" src="https://github.com/user-attachments/assets/fd07ff7e-f416-4cb1-8360-c33133c25a5e" />
 
 
-
+---
 В прошлой работе была выбрана неудачная адресация. Переделал
 
 ### Адресация
