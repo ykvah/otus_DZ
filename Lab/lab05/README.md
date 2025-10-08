@@ -63,3 +63,19 @@ R26 - R28 10.10.68.0/30
 ---
 ### R25
 
+<img width="954" height="872" alt="25" src="https://github.com/user-attachments/assets/e9a729ed-b984-4473-a605-6d4061887865" />
+
+исправил адреса на правильные
+
+<img width="547" height="102" alt="25исп" src="https://github.com/user-attachments/assets/6cff2cae-4eda-4774-9513-f414b3f71764" />
+
+
+---
+## Проверяем 
+
+show ip sla summary
+show track
+
+<img width="828" height="695" alt="pr28" src="https://github.com/user-attachments/assets/77c08a04-573e-48cc-90b5-c2f2915c6ea4" />
+
+
