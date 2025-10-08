@@ -17,7 +17,8 @@
 ---
 ### Схема
 
-<img width="1224" height="868" alt="сх" src="https://github.com/user-attachments/assets/5a976e09-4885-4f08-828d-e9a9e1d847e3" />
+<img width="1008" height="722" alt="Снимок+ip" src="https://github.com/user-attachments/assets/90754958-c1b7-44c2-9736-de7af05c7040" />
+
 
 ---
 ### Адресация
