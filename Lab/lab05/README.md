@@ -74,6 +74,7 @@ R26 - R28 10.10.68.0/30
 ## Проверяем 
 
 show ip sla summary
+
 show track
 
 <img width="828" height="695" alt="pr28" src="https://github.com/user-attachments/assets/77c08a04-573e-48cc-90b5-c2f2915c6ea4" />
