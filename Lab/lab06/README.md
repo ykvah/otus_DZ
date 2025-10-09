@@ -37,7 +37,8 @@ R15 - R12 10.10.152.0/30
 
 R15 - R13 10.10.153.0/30
 
-<img width="346" height="615" alt="ip" src="https://github.com/user-attachments/assets/76b17da6-2601-40f5-8880-9e4fdbcea5f5" />
+<img width="350" height="616" alt="ip" src="https://github.com/user-attachments/assets/62b2effa-8020-4e88-9e9b-9ae8730db366" />
+
 
 
 ---
