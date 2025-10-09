@@ -48,7 +48,7 @@ R15 - R13 10.10.153.0/30
 
 
 ---
-### 
+#### Настройка
 
 ---
 ### R20 
@@ -57,19 +57,45 @@ R15 - R13 10.10.153.0/30
 
 + включаем passive на лупбэке чтобы он не менял статус и не слал Helo парекеты
 
+<img width="857" height="724" alt="R20" src="https://github.com/user-attachments/assets/13cca1d9-e73f-4aad-a6c6-87c71a7183f1" />
+
+
 ---
 ### R19
 
 Чтобы выполнить поставленную задачу назначаем area 101 stub area а на R14 укажем no-summary
 
+<img width="1119" height="763" alt="R19" src="https://github.com/user-attachments/assets/624a4570-a173-4dd7-b604-dd1ef793fe77" />
+
+
 ---
 ### R14
+
+<img width="850" height="1030" alt="R14" src="https://github.com/user-attachments/assets/b617e623-736e-4b93-9e87-6ebcd57f2b85" />
 
 
 ---
 ### R15
 
 Добовляем фильтрацию и включаем ее для area 102
+
+<img width="948" height="1034" alt="R15" src="https://github.com/user-attachments/assets/58addd1c-2615-42c5-b7e5-9af2876e53d7" />
+
+
+---
+### R12
+
+<img width="951" height="1034" alt="R12" src="https://github.com/user-attachments/assets/50c9261d-b356-4c67-81af-06fed0d7a07b" />
+
+
+---
+### R13
+
+<img width="958" height="853" alt="R13" src="https://github.com/user-attachments/assets/5899df78-2579-4be6-bd70-287407c17b16" />
+
+
+---
+### Проверка
 
 
 
