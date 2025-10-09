@@ -96,6 +96,10 @@ R15 - R13 10.10.153.0/30
 
 
 ---
+---
+---
+
+
 ### Проверка
 
 <img width="958" height="676" alt="t20" src="https://github.com/user-attachments/assets/c398222b-1d70-4778-b456-a40178b14e99" />
