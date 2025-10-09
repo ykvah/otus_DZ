@@ -59,6 +59,7 @@ R15 - R13 10.10.153.0/30
 
 <img width="857" height="724" alt="R20" src="https://github.com/user-attachments/assets/13cca1d9-e73f-4aad-a6c6-87c71a7183f1" />
 
+*на скрине опечатка. позже поправил сеть на 10.10.150.0
 
 ---
 ### R19
