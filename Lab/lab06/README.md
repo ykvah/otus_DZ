@@ -19,6 +19,9 @@
 
 <img width="1008" height="722" alt="Снимок+ip" src="https://github.com/user-attachments/assets/90754958-c1b7-44c2-9736-de7af05c7040" />
 
+Так как поставленная задача противоречит изначальной схеме 
+
+не будем мудрить с виртуальным линком и добавим физический линк между R14 e1/1 и R15 e1/1
 
 ---
 ### Адресация
@@ -31,13 +34,16 @@ R14 - R12 10.10.142.0/30
 
 R14 - R13 10.10.143.0/30
 
+R14 - R15 10.10.145.0/30
+
 R15 - R20 10.10.150.0/30
 
 R15 - R12 10.10.152.0/30
 
 R15 - R13 10.10.153.0/30
 
-<img width="350" height="616" alt="ip" src="https://github.com/user-attachments/assets/62b2effa-8020-4e88-9e9b-9ae8730db366" />
+<img width="347" height="679" alt="ip" src="https://github.com/user-attachments/assets/1dbea01b-63df-404c-9dc8-201cd0da1420" />
+
 
 
 
