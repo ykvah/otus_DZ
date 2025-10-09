@@ -98,9 +98,19 @@ R15 - R13 10.10.153.0/30
 ---
 ### Проверка
 
+<img width="958" height="676" alt="t20" src="https://github.com/user-attachments/assets/c398222b-1d70-4778-b456-a40178b14e99" />
+
+<img width="951" height="618" alt="t19" src="https://github.com/user-attachments/assets/8043e379-6558-4ce6-8f2b-406aa037bc6c" />
 
 
+<img width="958" height="711" alt="t15" src="https://github.com/user-attachments/assets/bdefe601-a554-4b80-bf2a-5d63e31960ee" />
 
+<img width="954" height="734" alt="t14" src="https://github.com/user-attachments/assets/5c7ee2a7-bb91-4035-afeb-434f5a54d51a" />
+
+
+<img width="957" height="782" alt="t13" src="https://github.com/user-attachments/assets/61084e98-2be4-40ba-ad7d-bb9aac3c5217" />
+
+<img width="949" height="762" alt="t12" src="https://github.com/user-attachments/assets/dbb39b16-1161-4fe8-8557-c0c06316fa33" />
 
 
 
