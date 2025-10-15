@@ -43,4 +43,30 @@ System Id (6 байт) получим путем добавленя назван
 ---
 ### Настройка
 
+#### 23 
 
+<img width="957" height="792" alt="23" src="https://github.com/user-attachments/assets/c55f35f7-cc71-4b4e-95f3-23aaeef50858" />
+
+---
+#### 24
+
+<img width="959" height="614" alt="24" src="https://github.com/user-attachments/assets/0f85a39c-3e21-49af-b0da-8645e7567540" />
+
+---
+
+На R25 и R26 дописываем недостающие настройки 
+
+`R25(config)#router isis
+R25(config-router)#net 49.2222.0025.0025.0025.00
+R25(config-router)#passive-interface default
+R25(config-router)#exit
+R25(config)#interface e0/0
+R25(config-if)#ip address 10.10.53.1 255.255.255.252
+R25(config-if)#ip router isis
+R25(config-if)#no shutdown
+R25(config-if)#exit
+R25(config)#interface e0/2
+R25(config-if)#ip router isis
+R25(config-if)#no shutdown
+R25(config-if)#exit
+`
