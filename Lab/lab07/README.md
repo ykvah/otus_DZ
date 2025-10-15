@@ -110,6 +110,18 @@ System Id (6 байт) получим путем добавленя назван
 
 ---
 
+### Проверка
+
+соседей и таблицы маршрутизации
+
+<img width="938" height="1028" alt="23-25" src="https://github.com/user-attachments/assets/7a92cf33-6a46-4966-85cc-4c7374c2adfa" />
+
+<img width="934" height="1019" alt="24-26" src="https://github.com/user-attachments/assets/ab4e77f0-7130-43f4-bb5f-4b2a7a9d7838" />
+
+
+
+
+
 
 
 
