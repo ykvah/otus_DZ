@@ -56,7 +56,7 @@ System Id (6 байт) получим путем добавленя назван
 
 На R25 и R26 дописываем недостающие настройки 
 
-`R25(config)#router isis
+` R25(config)#router isis
 
 R25(config-router)#net 49.2222.0025.0025.0025.00
 
@@ -80,7 +80,7 @@ R25(config-if)#ip router isis
 
 R25(config-if)#no shutdown
 
-R25(config-if)#exit`
+R25(config-if)#exit `
 
 
 
