@@ -105,5 +105,8 @@ R26(config)#interface e0/2
 R26(config-if)#ip router isis`
 
 
+---
+
+
 
 
