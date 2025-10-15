@@ -82,7 +82,7 @@ System Id (6 байт) получим путем добавленя назван
 
 ```R25(config-if)#exit```
 
-
+---
 
 ```R26(config)#router isis```
 
