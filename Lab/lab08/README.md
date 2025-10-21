@@ -20,4 +20,5 @@ R16-17 анонсируют только суммарные префиксы.
 
 <img width="441" height="459" alt="ip" src="https://github.com/user-attachments/assets/f5071c68-ee2c-4a84-a439-1e9b1a24927f" />
 
-
+---
+### 
