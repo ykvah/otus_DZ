@@ -47,26 +47,36 @@ neighbor 10.10.223.2 remote-as 520
 ---
 #### R21
 
-Ошибочно указан next-hop-self и еще не хватает neighbor 10.10.215.2 remote-as 1001 + исправил neighbor 10.10.224.2 remote-as 520
+Ошибочно указан next-hop-self и еще не хватает neighbor 10.10.145.2 remote-as 1001 + исправил neighbor 10.10.224.2 remote-as 520
 
 
 
 
 ---
-#### R
+#### R14
+
+Добавил neighbor neighbor 10.10.145.2 remote-as 1001
+
+а neighbor 10.10.214.1 next-hop-self заменил на neighbor 10.10.145.2 next-hop-self
 
 
 
 
 ---
-#### R
+#### R15
+
+neighbor 10.10.215.1 remote-as 301
+neighbor 10.10.145.2 remote-as 1001
+neighbor 10.10.145.2 next-hop-self
 
 
 
 
 
 ---
-#### R
+#### R18
+
+поправил
 
 
 
