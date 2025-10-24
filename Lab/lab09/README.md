@@ -71,9 +71,15 @@ neighbor 10.10.223.2 remote-as 520
 ---
 #### R15
 
-neighbor 10.10.215.1 remote-as 301
-neighbor 10.10.145.2 remote-as 1001
-neighbor 10.10.145.2 next-hop-self
+ !
+	 router bgp 1001
+	 bgp router-id 10.0.0.15
+	 bgp log-neighbor-changes
+	 network 10.0.0.15 mask 255.255.255.255
+	 neighbor 10.10.145.1 remote-as 1001
+	 neighbor 10.10.145.1 next-hop-self
+	 neighbor 10.10.215.1 remote-as 301
+	 !
 
 
 
@@ -109,18 +115,19 @@ neighbor 10.10.145.2 next-hop-self
 ---
 #### R24
 
-
-
-
-
-
----
-#### R
-
-
-
+<img width="957" height="449" alt="24" src="https://github.com/user-attachments/assets/8c333c01-0c92-462d-8cec-95633f34a631" />
 
 
 ---
-#### R
+#### R26
+
+<img width="959" height="519" alt="26" src="https://github.com/user-attachments/assets/7fa69f3c-eb3c-474e-bb77-3c2a81bad47f" />
+
+---
+---
+---
+
+### Проверка
+
+
 
