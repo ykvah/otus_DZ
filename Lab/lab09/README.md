@@ -91,9 +91,7 @@ neighbor 10.10.145.2 next-hop-self
 ---
 #### R23
 
-
-!
-```router bgp 520```
+```router bgp 520
 
  bgp router-id 10.0.0.23
  
@@ -105,10 +103,7 @@ neighbor 10.10.145.2 next-hop-self
  
  neighbor 10.10.34.1 next-hop-self
  
- neighbor 10.10.223.1 remote-as 101
- 
-!
-```
+ neighbor 10.10.223.1 remote-as 101```
 
 
 
