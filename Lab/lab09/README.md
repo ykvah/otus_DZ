@@ -82,11 +82,15 @@ neighbor 10.10.145.2 next-hop-self
 ---
 #### R18
 
-поправил
 
-
-
-
+     !
+	 router bgp 2042
+	 bgp router-id 10.0.0.18
+	 bgp log-neighbor-changes
+	 network 10.0.0.18 mask 255.255.255.255
+	 neighbor 10.10.124.1 remote-as 520
+	 neighbor 10.10.126.1 remote-as 520
+	 !
 
 ---
 #### R23
