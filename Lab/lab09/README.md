@@ -91,6 +91,15 @@ neighbor 10.10.145.2 next-hop-self
 ---
 #### R23
 
+!
+router bgp 520
+ bgp router-id 10.0.0.23
+ bgp log-neighbor-changes
+ network 10.0.0.23 mask 255.255.255.255
+ neighbor 10.10.34.1 remote-as 101
+ neighbor 10.10.34.1 next-hop-self
+ neighbor 10.10.223.1 remote-as 101
+!
 
 
 
