@@ -91,8 +91,6 @@ neighbor 10.10.145.2 next-hop-self
 ---
 #### R23
 
-Indented 4 spaces, like `<pre>` (Preformatted Text).
-Indented 4 spaces, like `<pre>` (Preformatted Text).
 
      router bgp 520 
 	bgp router-id 10.0.0.23
