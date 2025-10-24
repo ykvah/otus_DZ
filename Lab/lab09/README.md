@@ -71,7 +71,8 @@ neighbor 10.10.223.2 remote-as 520
 ---
 #### R15
 
- !
+
+     !
 	 router bgp 1001
 	 bgp router-id 10.0.0.15
 	 bgp log-neighbor-changes
@@ -80,6 +81,8 @@ neighbor 10.10.223.2 remote-as 520
 	 neighbor 10.10.145.1 next-hop-self
 	 neighbor 10.10.215.1 remote-as 301
 	 !
+
+
 
 
 
