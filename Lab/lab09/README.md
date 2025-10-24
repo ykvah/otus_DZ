@@ -83,7 +83,7 @@ neighbor 10.10.145.2 next-hop-self
 
 
 ---
-#### R
+#### R23
 
 
 
