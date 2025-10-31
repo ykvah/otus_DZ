@@ -94,13 +94,42 @@
 
 ---
 
-
+     !
+	R25#show run | sec bgp
+	router bgp 520
+	bgp log-neighbor-changes
+	neighbor 10.0.0.23 remote-as 520
+	neighbor 10.0.0.23 update-source Loopback0
+	neighbor 10.0.0.26 remote-as 520
+	neighbor 10.0.0.26 update-source Loopback0
+	!
+	address-family ipv4
+	neighbor 10.0.0.23 activate
+	neighbor 10.0.0.26 activate
+	exit-address-family
+	 !
 
 
 ---
 
 
-
+  !
+	R26#show run | sec bgp
+	router bgp 520
+	bgp log-neighbor-changes
+	neighbor 10.52.255.24 remote-as 520
+	neighbor 10.52.255.24 update-source Loopback0
+	neighbor 10.52.255.25 remote-as 520
+	neighbor 10.52.255.25 update-source Loopback0
+	neighbor 198.19.6.2 remote-as 2042
+	!
+	address-family ipv4
+	network 198.19.6.0 mask 255.255.255.252
+	neighbor 10.52.255.24 activate
+	neighbor 10.52.255.25 activate
+	neighbor 198.19.6.2 activate
+	exit-address-family
+	 !
 
 
 ---
