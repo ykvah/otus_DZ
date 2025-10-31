@@ -18,6 +18,7 @@
 
 #### Мосва
 
+R14 и R15 анансируем в OSPF и сроим iBGP соседство +сразу настраиваем приоритет на Ламас
 
      !
 	 R14(config)#router ospf 1
@@ -138,4 +139,11 @@
 
 ---
 
+#### СПБ
+
+     !
+	R18(config)#router bgp 2042
+	R18(config-router)#address-family ipv4 unicast
+	R18(config-router-af)#maximum-paths 2
+	 !
 	 
