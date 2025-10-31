@@ -18,7 +18,8 @@
 
 #### Мосва
 
-   !
+
+     !
 	 R14(config)#router ospf 1
 	 R14(config-router)#network 10.0.0.14 0.0.0.0 area 0
 	 R14(config-router)#end
@@ -29,6 +30,8 @@
 	 R14(config-router-af)#neighbor 10.0.0.15 activate
 	 !
 
+	 
+---
 
      !
 	R15(config)#router ospf 1
