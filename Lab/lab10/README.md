@@ -28,6 +28,10 @@
 	 R14(config-router)#neighbor 10.0.0.15 update-source l0
 	 R14(config-router)#address-family ipv4 unicast
 	 R14(config-router-af)#neighbor 10.0.0.15 activate
+	 R14(config)#route-map PRLAMAS permit 10
+	 R14(config)#router bgp 1001
+	 R14(config-router)#address-family ipv4 unicast
+	 R14(config-router-af)#neighbor 10.10.214.1 route-map PRLAMAS out
 	 !
 
 	 
