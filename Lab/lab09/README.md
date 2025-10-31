@@ -189,5 +189,6 @@ R18 - R26 - 10.10.126.0/30
 
 ### Проверка
 
+<img width="602" height="352" alt="pr" src="https://github.com/user-attachments/assets/d9b9dc41-7d40-4961-9f9d-74ec628cc17b" />
 
 
