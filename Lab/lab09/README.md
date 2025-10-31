@@ -45,27 +45,60 @@ R18 - R26 - 10.10.126.0/30
 
 #### R22 
 
-Ошибочно указан neighbor 10.10.222.1 next-hop-selfneighbor и не добавлен 
-neighbor 10.10.223.2 remote-as 520
+     !
+	router bgp 101
+	bgp router-id 10.0.0.22
+	bgp log-neighbor-changes
+	neighbor 10.10.214.2 remote-as 1001
+	neighbor 10.10.222.1 remote-as 301
+	neighbor 10.10.223.2 remote-as 520
+	network 10.0.0.22 mask 255.255.255.255
+	address-family ipv4
+	neighbor 10.10.214.2 activate
+	neighbor 10.10.222.1 activate
+	neighbor 10.10.223.2 activate
+	exit-address-family
+
+	 !
 
 
 
 ---
 #### R21
 
-Ошибочно указан next-hop-self и еще не хватает neighbor 10.10.145.2 remote-as 1001 + исправил neighbor 10.10.224.2 remote-as 520
+     !
+	router bgp 301
+	bgp router-id 10.0.0.21
+	bgp log-neighbor-changes
+	neighbor 10.10.222.2 remote-as 101
+	neighbor 10.10.224.2 remote-as 520
+	neighbor 10.10.215.2 remote-as 1001
+	network 10.0.0.21 mask 255.255.255.255
+	address-family ipv4
+	neighbor 10.10.215.2 activate
+	neighbor 10.10.222.2 activate
+	neighbor 10.10.224.2 activate
+	exit-address-family
 
-
+	 !
 
 
 ---
 #### R14
 
-Добавил neighbor neighbor 10.10.145.2 remote-as 1001
+     !
+	 router bgp 1001
+	 bgp router-id 10.0.0.14
+	 neighbor 10.10.214.1 remote-as 101
+	 neighbor 10.10.145.2 remote-as 1001
+	 neighbor 10.10.145.2 next-hop-self
+	 network 10.0.0.14 mask 255.255.255.255
+	 address-family ipv4
+	 neighbor 10.10.214.1 activate
+	 neighbor 10.10.145.2 activate
+	 exit-address-family
 
-а neighbor 10.10.214.1 next-hop-self заменил на neighbor 10.10.145.2 next-hop-self
-
-
+	 !
 
 
 ---
@@ -80,6 +113,11 @@ neighbor 10.10.223.2 remote-as 520
 	 neighbor 10.10.145.1 remote-as 1001
 	 neighbor 10.10.145.1 next-hop-self
 	 neighbor 10.10.215.1 remote-as 301
+	 address-family ipv4
+	 neighbor 10.10.215.1 activate
+	 neighbor 10.10.145.1 activate
+	 exit-address-family
+
 	 !
 
 
@@ -96,36 +134,55 @@ neighbor 10.10.223.2 remote-as 520
 	 router bgp 2042
 	 bgp router-id 10.0.0.18
 	 bgp log-neighbor-changes
-	 network 10.0.0.18 mask 255.255.255.255
 	 neighbor 10.10.124.1 remote-as 520
 	 neighbor 10.10.126.1 remote-as 520
+	 network 10.0.0.18 mask 255.255.255.255
+	 address-family ipv4
+	 neighbor 10.10.124.1 activate
+	 neighbor 10.10.126.1 activate
+	 exit-address-family
+
 	 !
 
 ---
 #### R23
 
 
-     router bgp 520 
-	bgp router-id 10.0.0.23
-	bgp log-neighbor-changes
-	network 10.0.0.23 mask 255.255.255.255
-	neighbor 10.10.34.1 remote-as 101
-	neighbor 10.10.34.1 next-hop-self
-	neighbor 10.10.223.1 remote-as 101
-	
+         !
+	 router bgp 520
+	 bgp router-id 10.0.0.23
+	 bgp log-neighbor-changes
+	 neighbor 10.10.223.1 remote-as 101
+	 neighbor 10.10.34.1 remote-as 520
+	 neighbor 10.10.34.1 next-hop-self
+	 network 10.0.0.23 mask 255.255.255.255
+	 address-family ipv4
+	 neighbor 10.10.223.1 activate
+	 neighbor 10.10.34.1 activate
+	 exit-address-family
+
+	 !
 
 
 ---
 #### R24
 
-<img width="957" height="449" alt="24" src="https://github.com/user-attachments/assets/8c333c01-0c92-462d-8cec-95633f34a631" />
+     !
+	 router bgp 520
+	 bgp router-id 10.0.0.24
+	 bgp log-neighbor-changes
+	 neighbor 10.10.224.1 remote-as 301
+	 neighbor 10.10.124.2 remote-as 2042
+	 neighbor 10.10.34.2 remote-as 520
+	 neighbor 10.10.34.2 next-hop-self
+	 network 10.0.0.24 mask 255.255.255.255
+	 address-family ipv4
+	 neighbor 10.10.224.1 activate
+	 neighbor 10.10.34.2 activate
+	 neighbor 10.10.124.2 activate
+	 exit-address-family
 
-
----
-#### R26
-
-<img width="959" height="519" alt="26" src="https://github.com/user-attachments/assets/7fa69f3c-eb3c-474e-bb77-3c2a81bad47f" />
-
+	 !
 ---
 ---
 ---
