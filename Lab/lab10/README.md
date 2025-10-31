@@ -118,8 +118,8 @@ R14 и R15 анансируем в OSPF и сроим iBGP соседство +�
 ---
 
 
-  !
-	R26#show run | sec bgp
+     !
+		R26#show run | sec bgp
 	router bgp 520
 	bgp log-neighbor-changes
 	neighbor 10.52.255.24 remote-as 520
