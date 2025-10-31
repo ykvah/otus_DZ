@@ -43,3 +43,66 @@
 	R15(config-router)#address-family ipv4 unicast
 	R15(config-router-af)#neighbor 10.0.0.14 activate
 	 !
+
+
+#### Триада
+
+
+
+     !
+	R23#show run | sec bgp
+	router bgp 520
+	bgp log-neighbor-changes
+	neighbor 10.0.0.24 remote-as 520
+	neighbor 10.0.0.24 update-source Loopback0
+	neighbor 10.0.0.25 remote-as 520
+	neighbor 10.0.0.25 update-source Loopback0
+	!
+	address-family ipv4
+	neighbor 10.0.0.24 activate
+	neighbor 10.0.0.25 activate
+	neighbor 10.0.0.25 route-reflector-client
+	exit-address-family
+
+	 !
+
+---
+
+     !
+	R24#show run | s bgp
+	redistribute bgp 520
+	router bgp 520
+	bgp log-neighbor-changes
+	neighbor 10.0.0.23 remote-as 520
+	neighbor 10.0.0.23 update-source Loopback0
+	neighbor 10.0.0.26 remote-as 520
+	neighbor 10.0.0.26 update-source Loopback0
+	neighbor 10.10.224.1 remote-as 301
+	neighbor 10.10.124.2 remote-as 2042
+	!
+	address-family ipv4
+	network 10.10.224.0 mask 255.255.255.252
+	network 10.10.124.0 mask 255.255.255.252
+	neighbor 10.0.0.23 activate
+	neighbor 10.0.0.26 activate
+	neighbor 10.0.0.26 route-reflector-client
+	neighbor 10.10.224.1 activate
+	neighbor 10.10.124.2 activate
+	exit-address-family
+
+	 !
+
+---
+
+
+
+
+---
+
+
+
+
+
+---
+
+	 
