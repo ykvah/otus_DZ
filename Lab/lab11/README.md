@@ -69,10 +69,25 @@
 	R18(config-router-af)#neighbor 10.10.124.1 route-map 2 out
 	R18(config-router-af)#neighbor 10.10.126.1 route-map 2 out
 	 !
+---
+
+#### Настроить провайдера Киторн так, чтобы в офис Москва отдавался только маршрут по умолчанию.
+
+   !
+	R22(config)#router bgp 101
+	R22(config-router)#address-family ipv4 unicast
+	R22(config-router-af)#neighbor 10.10.215.2 default-originate
+	 !
+
+---
+
+
+
+---
 
 
 
 
-
+---
 
 	 
