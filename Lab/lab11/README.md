@@ -26,7 +26,26 @@
 	R14(config-route-map)#match as-path 1
 	 !
 
+---
 
-R14(config-route-map)#router bgp 1001
-R14(config-router)#address-family ipv4 unicast
-R14(config-router-af)#neighbor 198.18.0.2 route-map 1 out
+     !
+	R14(config-route-map)#router bgp 1001
+	R14(config-router)#address-family ipv4 unicast
+	R14(config-router-af)#neighbor 10.10.214.1 route-map 1 out
+	 !
+
+---
+
+     !
+	R15(config)#ip as-path access-list 1 permit ^$
+	R15(config)#route-map 1 permit 10
+	R15(config-route-map)#match as-path 1
+	 !
+
+---
+     !
+	R15(config-route-map)#router bgp 1001
+	R15(config-router)#address-family ipv4 unicast
+	R15(config-router-af)#nei
+	R15(config-router-af)#neighbor 10.10.215.1 route-map 1 out
+	 !
