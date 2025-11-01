@@ -73,21 +73,31 @@
 
 #### Настроить провайдера Киторн так, чтобы в офис Москва отдавался только маршрут по умолчанию.
 
-   !
+     !
 	R22(config)#router bgp 101
 	R22(config-router)#address-family ipv4 unicast
 	R22(config-router-af)#neighbor 10.10.215.2 default-originate
 	 !
 
----
-
-
 
 ---
+#### Настроить провайдера Ламас так, чтобы в офис Москва отдавался только маршрут по умолчанию и префикс офиса С.-Петербург.
 
-
-
+     !
+	R15(config)#ip prefix-list PITER seq 10 permit 0.0.0.0/0 le 32
+	R15(config)#ip prefix-list PITER seq 20 permit 10.0.0.16/32
+	R15(config)#ip prefix-list PITER seq 30 permit 10.0.0.17/32
+	R15(config)#ip prefix-list PITER seq 40 permit 10.0.0.18/32
+	R15(config)#ip prefix-list PITER seq 50 permit 10.0.0.32/32
+	R15(config)#ip prefix-list PITER seq 60 permit 10.10.86.0/30
+	R15(config)#ip prefix-list PITER seq 70 permit 10.10.87.0/30
+	R15(config)#ip prefix-list PITER seq 80 permit 10.10.163.0/30
+	R15(config)#router bgp 1001
+	R15(config-router)#address-family ipv4 unicast
+	R15(config-router-af)#neighbor 10.10.215.1 prefix-list PITER in
+	 !
 
 ---
+
 
 	 
