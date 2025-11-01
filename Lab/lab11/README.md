@@ -54,10 +54,10 @@
 #### Настроить фильтрацию в офисе С.-Петербург так, чтобы не появилось транзитного трафика(Prefix-list).
 
      !
-	R18(config)#ip prefix-list SPB permit 10.0.0.0/24 le 32
-	R18(config)#ip prefix-list SPB permit 10.10.86.0/24 le 32
-	R18(config)#ip prefix-list SPB permit 10.10.87.0/24 le 32
-	R18(config)#ip prefix-list SPB permit 10.10.163.0/24 le 32
+	R18(config)#ip prefix-list SPB permit 10.0.0.0/32 le 32
+	R18(config)#ip prefix-list SPB permit 10.10.86.0/30 le 32
+	R18(config)#ip prefix-list SPB permit 10.10.87.0/30 le 32
+	R18(config)#ip prefix-list SPB permit 10.10.163.0/30 le 32
 	R18(config)#route-map 2 permit 10
 	R18(config-route-map)#match ip address prefix-list SPB
 	 !
