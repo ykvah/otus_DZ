@@ -17,4 +17,16 @@
 ### Настройка 
 
 
-#### R22 
+#### Настроить фильтрацию в офисе Москва так, чтобы не появилось транзитного трафика(As-path).
+
+
+     !
+	R14(config)#ip as-path access-list 1 permit ^$
+	R14(config)#route-map 1 permit 10
+	R14(config-route-map)#match as-path 1
+	 !
+
+
+R14(config-route-map)#router bgp 1001
+R14(config-router)#address-family ipv4 unicast
+R14(config-router-af)#neighbor 198.18.0.2 route-map 1 out
