@@ -65,6 +65,18 @@
 #### Настроите NAT(PAT) на R18
 
 
+
+     !
+	R18(config)#ip nat pool NAT_R18 192.168.0.8 192.168.0.13 netmask 255.255.255.0
+	R18(config)#access-list 1 permit 192.168.0.0 0.0.255.255
+	R18(config)#ip nat inside source list 1 pool NAT_R18 overload
+	R18(config)#interface range e0/0-1
+	R18(config-if-range)#ip nat inside
+	R18(config-if-range)#exit
+	R18(config)#interface range e0/2-3
+	R18(config-if-range)#ip nat outside
+	 !
+
 ---
 
 
