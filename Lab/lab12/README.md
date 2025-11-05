@@ -8,7 +8,7 @@
 
 Настроите NAT так, чтобы R19 был доступен с любого узла для удаленного управления.
 
-+ Настроите статический NAT(PAT) для офиса Чокурдах.
+Настроите статический NAT(PAT) для офиса Чокурдах.
 
 Настроите для IPv4 DHCP сервер в офисе Москва на маршрутизаторах R12 и R13. VPC1 и VPC7 должны получать сетевые настройки по DHCP.
 
@@ -43,5 +43,47 @@
 	 !
 
 
+---
 
+
+     !
+	R15(config)#access-list 1 permit 10.10.142.0 0.0.0.3
+	R15(config)#access-list 1 permit 10.10.143.0 0.0.0.3
+	R15(config)#access-list 1 permit 10.10.152.0 0.0.0.3
+	R15(config)#access-list 1 permit 10.10.153.0 0.0.0.3
+	R15(config)#access-list 1 permit 10.10.149.0 0.0.0.3
+	R15(config)#access-list 1 permit 10.10.150.0 0.0.0.3
+	R15(config)#ip nat inside source list 1 interface e0/2 overload
+	R15(config)#interface range e0/0-1, e0/3
+	R15(config-if-range)#ip nat inside
+	R15(config-if-range)#interface e0/2
+	R15(config-if)#ip nat outside
+	 !
+
+
+---
+
+
+
+---
+
+
+
+
+---
+
+
+
+
+---
+
+
+
+
+---
+
+
+
+
+---
    
