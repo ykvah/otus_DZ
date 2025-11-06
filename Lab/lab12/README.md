@@ -19,6 +19,21 @@
 
 <img width="2758" height="1707" alt="Снимок экрана 2025-11-01 165512" src="https://github.com/user-attachments/assets/5c80fb52-9766-4f73-a2b1-e7b01625773f" />
 
+### Адресация
+
+Добавляем недостающую адресацию 
+
+VPC1 - 192.168.10.1/24
+
+VPC7 - 192.168.10.7/24
+
+VPC8 - 192.168.20.8/24
+
+VPC - 192.168.20.10/24
+
+VPC30 - 192.168.30.30/24
+
+VPC31 - 192.168.30.31/24
 
 ---
 ### Настройка 
@@ -67,7 +82,7 @@
 Пул с адресами VPC и VPC8
 
      !
-	R18(config)#ip nat pool NAT_R18 192.168.0.8 192.168.0.13 netmask 255.255.255.0
+	R18(config)#ip nat pool NAT_R18 192.168.20.8 192.168.20.13 netmask 255.255.255.0
 	R18(config)#access-list 1 permit 192.168.0.0 0.0.255.255
 	R18(config)#ip nat inside source list 1 pool NAT_R18 overload
 	R18(config)#interface range e0/0-1
@@ -128,6 +143,28 @@
 ---
 
 #### Настроите для IPv4 DHCP сервер в офисе Москва на маршрутизаторах R12 и R13. VPC1 и VPC7 должны получать сетевые настройки по DHCP.
+
+    !
+	 R12(config)#service dhcp
+	 R12(config)#ip dhcp pool MOSCOW_1
+	 R12(config)#network 192.168.10.1.1 255.255.255.0
+	 R12(dhcp-config)#default-router 192.168.10.1.254
+	 R12(config)#ip dhcp pool MOSCOW_7
+	 R12(dhcp-config)#network 192.168.10.7 255.255.255.0
+	 R12(dhcp-config)#default-router 192.168.10.54
+	 !
+
+
+	 
+     !
+	 R13(config)#service dhcp
+	 R13(config)#ip dhcp pool MOSCOW_1
+	 R13(config)#network 192.168.10.1.1 255.255.255.0
+	 R13(dhcp-config)#default-router 192.168.10.1.254
+	 R13(config)#ip dhcp pool MOSCOW_7
+	 R13(dhcp-config)#network 192.168.10.7 255.255.255.0
+	 R13(dhcp-config)#default-router 192.168.10.54
+	 !
 
 
 ---
