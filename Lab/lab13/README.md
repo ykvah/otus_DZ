@@ -61,7 +61,7 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 + редистрибьюция присоединённых сетей на R25 в Триада
 
 
-   !
+     !
 	 R25(config)#router isis
 	 R25(config-router)#redistribute connected
 	 !
