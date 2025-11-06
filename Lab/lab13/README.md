@@ -58,8 +58,24 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 	 R14(config-if)#tunnel key 11
 	 !
 
----
 
+
+
+ 
+	 R15(config)#interface Tunnel10
+	 R15(config-if)#description DMVPN
+	 R15(config-if)#ip address 10.10.10.10 255.255.255.0
+	 R15(config-if)#ip mtu 1400
+	 R15(config-if)#ip nhrp map multicast dynamic
+	 R15(config-if)#ip nhrp network-id 1
+	 R15(config-if)#ip tcp adjust-mss 1360
+	 R15(config-if)#tunnel source 10.10.215.2
+	 R15(config-if)#tunnel mode gre multipoint
+	 R15(config-if)#tunnel key 1
+	 !
+
+
+---
 
      !
 	 R27(config)##interface Tunnel10
