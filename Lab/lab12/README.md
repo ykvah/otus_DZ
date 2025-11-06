@@ -89,11 +89,18 @@
 	R15(config)#interface e0/3
 	 !
 
-
-
-
 ---
+#### Настроите NAT так, чтобы R19 был доступен с любого узла для удаленного управления.
 
+Для этого настраиваем NAT на R14
+
+
+     !
+	R14(config)#ip nat inside source static tcp 10.10.149.1 22 10.10.214.2 22 extendable
+	R14(config)#ip nat inside source static tcp 10.10.149.1 23 10.10.214.2 23 extendable
+	R14(config)#interface Ethernet0/3
+	R14(config)#ip nat inside
+	 !
 
 
 
