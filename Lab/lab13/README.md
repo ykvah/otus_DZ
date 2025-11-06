@@ -4,9 +4,6 @@
 
 Настроите DMVMN между Москва и Чокурдах, Лабытнанги.
 
-Все узлы в офисах в лабораторной работе должны иметь IP связность.
-
-План работы и изменения зафиксированы в документации.
 
 ---
 ### Схема
@@ -47,44 +44,18 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 ---
 #### Настроите DMVMN между Москва и Чокурдах, Лабытнанги.
 
-редистрибьюция ISIS в BGP на R24 Триада
-
-
      !
-	 R24#conf t
-	 R24(config)#router bgp 520
-	 R24(config-router)#address-family ipv4 unicast
-	 R24(config-router-af)#redistribute isis
-	 R24(config-router-af)#exit
-	 !
-
- редистрибьюция присоединённых сетей на R25 в Триада
-
-
-     !
-	 R25(config)#router isis
-	 R25(config-router)#redistribute connected
-	 !
-
----
-
-
-
-     !
-	 R14(config)##interface Tunnel10
+	 	 
+	 R14(config)#interface Tunnel10
+	 R14(config-if)#description DMVPN
 	 R14(config-if)#ip address 10.10.10.10 255.255.255.0
 	 R14(config-if)#ip mtu 1400
-	 R14(config-if)#ip tcp adjust-mss 1360
-	 R14(config-if)# tunnel source 10.10.214.2
-	 R14(config-if)#tunnel destination 10.10.57.2
-	 R14(config-if)#exit
-	 R14(config)#interface t10
-	 R14(config-if)#tunnel mode gre multipoint
-	 Tunnel set mode failed. p2mp tunnels cannot have a tunnel destination.
-	 R14(config-if)#no tunnel destination 10.10.57.2
-	 R14(config-if)#tunnel mode gre multipoint
-	 R14(config-if)#ip nhrp network-id 100
 	 R14(config-if)#ip nhrp map multicast dynamic
+	 R14(config-if)#ip nhrp network-id 11
+	 R14(config-if)#ip tcp adjust-mss 1360
+	 R14(config-if)#tunnel source 10.10.214.2
+	 R14(config-if)#tunnel mode gre multipoint
+	 R14(config-if)#tunnel key 11
 	 !
 
 ---
@@ -103,7 +74,7 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 	 Tunnel set mode failed. p2mp tunnels cannot have a tunnel destination.
 	 R14(config-if)#no tunnel destination 10.10.57.2
 	 R14(config-if)#tunnel mode gre multipoint
-	 R14(config-if)#ip nhrp network-id 100
+	 R14(config-if)#ip nhrp network-id 10
 	 R14(config-if)#ip nhrp map multicast dynamic
 	 
 	 !
