@@ -79,6 +79,16 @@
 
 ---
 
+#### Настроите статический NAT для R20
+
+Для этого настраиваем NAT на R15
+
+
+     !
+	R15(config)#ip nat inside source static 10.10.150.1 10.10.215.2
+	R15(config)#interface e0/3
+	 !
+
 
 
 
