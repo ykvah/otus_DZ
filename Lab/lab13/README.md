@@ -1,1 +1,59 @@
-1313131313
+Цель: 
+
+Настроите GRE между офисами Москва и С.-Петербург.
+
+Настроите DMVMN между Москва и Чокурдах, Лабытнанги.
+
+Все узлы в офисах в лабораторной работе должны иметь IP связность.
+
+План работы и изменения зафиксированы в документации.
+
+---
+### Схема
+
+<img width="2758" height="1707" alt="Снимок экрана 2025-11-01 165512" src="https://github.com/user-attachments/assets/5c80fb52-9766-4f73-a2b1-e7b01625773f" />
+
+---
+### Настройка 
+
+
+#### Настроите GRE между офисами Москва и С.-Петербург.
+
+Настроим GRE между роутером R15 Москва и R18 С.-Петербург.
+
+Возьмём для GRE туннеля адрес 10.10.10.10 255.255.255.0.
+
+
+     !
+	 R15(config)##interface Tunnel0
+	 R15(config-if)#ip address 10.10.10.10 255.255.255.0
+	 R15(config-if)#ip mtu 1400
+	 R15(config-if)#ip tcp adjust-mss 1360
+	 R15(config-if)# tunnel source 10.10.215.2
+	 R15(config-if)#tunnel destination 10.10.124.2
+	 !
+
+
+     !
+	 R18(config)##interface Tunnel0
+	 R18(config-if)#ip address 10.10.10.10 255.255.255.0
+	 R18(config-if)#ip mtu 1400
+	 R18(config-if)#ip tcp adjust-mss 1360
+	 R18(config-if)# tunnel source 10.10.124.2
+	 R18(config-if)#tunnel destination 10.10.215.2
+	 !
+
+
+---
+#### 
+
+
+
+---
+####
+
+
+
+---
+####
+
