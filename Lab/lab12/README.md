@@ -168,4 +168,53 @@ VPC31 - 192.168.30.31/24
 
 
 ---
-####    
+####   Настроите NTP сервер на R12 и R13. Все устройства в офисе Москва должны синхронизировать время с R12 и R13.
+
+
+
+
+     !
+	 R12(config)#ntp master
+	 R12(config)#ntp authentication-key 1 md5 qwerty
+	 R12(config)#ntp authenticate
+	 R12(config)#ntp trusted-key 1
+	 R12(config)#ntp source Loopback0
+	 !
+
+
+
+
+     !
+	 R13(config)#ntp master
+	 R13(config)#ntp authentication-key 1 md5 qwerty
+	 R13(config)#ntp authenticate
+	 R13(config)#ntp trusted-key 1
+	 R13(config)#ntp source Loopback0
+	 !
+
+
+Oстальные устройства как NTP клиенты
+
+     !
+	 R14(config)#ntp authentication-key 1 md5 qwerty
+	 R14(config)#ntp authenticate
+	 R14(config)#ntp trusted-key 1
+	 R14(config)#ntp source Loopback0
+	 R14(config)#ntp server 10.0.0.12 prefer
+	 R14(config)#ntp server 10.0.0.13
+	 !
+
+
+
+
+     !
+	 R15(config)#ntp authentication-key 1 md5 qwerty
+	 R15(config)#ntp authenticate
+	 R15(config)#ntp trusted-key 1
+	 R15(config)#ntp source Loopback0
+	 R15(config)#ntp server 10.0.0.12 prefer
+	 R15(config)#ntp server 10.0.0.13
+	 !
+
+
+
