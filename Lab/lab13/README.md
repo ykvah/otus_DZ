@@ -19,9 +19,9 @@
 
 #### Настроите GRE между офисами Москва и С.-Петербург.
 
-Настроим GRE между роутером R15 Москва и R18 С.-Петербург.
+Mежду роутером R15 Москва и R18 С.-Петербург
 
-Возьмём для GRE туннеля адрес 10.10.10.10 255.255.255.0.
+возьмём для GRE туннеля адрес 10.10.10.10 255.255.255.0.
 
 
      !
@@ -45,7 +45,23 @@
 
 
 ---
-#### 
+#### Настроите DMVMN между Москва и Чокурдах, Лабытнанги.
+
+     !
+	 R24#conf t
+	 R24(config)#router bgp 520
+	 R24(config-router)#address-family ipv4 unicast
+	 R24(config-router-af)#redistribute isis
+	 R24(config-router-af)#exit
+	 !
+
++ редистрибьюция присоединённых сетей на R25 в Триада
+
+
+   !
+	 R25(config)#router isis
+	 R25(config-router)#redistribute connected
+	 !
 
 
 
