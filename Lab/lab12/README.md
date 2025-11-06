@@ -92,7 +92,7 @@
 ---
 #### Настроите NAT так, чтобы R19 был доступен с любого узла для удаленного управления.
 
-Для этого настраиваем NAT на R14
+Для этого настраиваем NAT на R14 c пробросом портов для подключения 
 
 
      !
@@ -105,6 +105,22 @@
 
 
 ---
+#### Настроите статический NAT(PAT) для офиса Чокурдах.
+
+
+     !
+	 R28(config)#ip nat pool NAT-POOL1 10.10.68.1 10.10.68.1 prefix-length 30
+	R28(config)#access-list 100 permit ip 10.10.58.0 0.0.0.3 any
+	R28(config)#access-list 100 permit ip 10.10.68.0 0.0.0.3 any
+	R28(config)#ip nat inside source list 100 pool NAT-POOL1 overload
+	R28(config)#interface Ethernet0/0
+	R28(config-if)#ip nat outside
+	R28(config-if)#interface Ethernet0/0
+	R28(config-if)# ip nat outside
+	R28(config-if)#interface Ethernet0/0
+	R28(config-if)#interface Ethernet0/2
+	R28(config-if)# ip nat inside
+	 !
 
 
 
