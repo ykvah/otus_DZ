@@ -47,6 +47,9 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 ---
 #### Настроите DMVMN между Москва и Чокурдах, Лабытнанги.
 
+редистрибьюция ISIS в BGP на R24 Триада
+
+
      !
 	 R24#conf t
 	 R24(config)#router bgp 520
@@ -62,6 +65,8 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 	 R25(config)#router isis
 	 R25(config-router)#redistribute connected
 	 !
+
+---
 
 
 
