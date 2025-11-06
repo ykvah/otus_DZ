@@ -77,6 +77,16 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 	 R14(config-if)#ip tcp adjust-mss 1360
 	 R14(config-if)# tunnel source 10.10.214.2
 	 R14(config-if)#tunnel destination 10.10.57.2
+	 R14(config-if)#exit
+	 R14(config)#interface t100
+	 R14(config-if)#tunnel mode gre multipoint
+	 Tunnel set mode failed. p2mp tunnels cannot have a tunnel destination.
+	 R14(config-if)#no tunnel destination 10.10.57.2
+	 R14(config-if)#tunnel mode gre multipoint
+	 R14(config-if)#ip nhrp network-id 100
+	 R14(config-if)#ip nhrp map multicast dynamic
+	 !
+
 	 !
 
 
