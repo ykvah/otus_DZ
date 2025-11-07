@@ -18,7 +18,7 @@
 
 #### R15
 
-crypto isakmp policy 10
+ 	 crypto isakmp policy 10
 	 encr aes
 	 authentication pre-share
 	 group 2
@@ -30,7 +30,7 @@ crypto isakmp policy 10
 	 
 	 crypto ipsec profile PROTECT-GRE
 	 set transform-set GRE-IPSEC
-
+	 !
 
 ---
 #### R18
