@@ -36,7 +36,21 @@
 ---
 #### R15
 
-
+	 crypto isakmp policy 10
+	 encr aes
+	 authentication pre-share
+	 group 15
+	 crypto isakmp key Otus! address 10.10.124.2    
+    
+	crypto ipsec transform-set GRE-IPSEC esp-3des esp-sha-hmac 
+	mode transport
+	
+	crypto ipsec profile PROTECT-GRE
+	set transform-set GRE-IPSEC 
+	
+	interface Tunnel15
+	tunnel protection ipsec profile PROTECT-GRE
+	 !
 
 
 
