@@ -18,7 +18,7 @@
 #### R14
 
 
- !
+  !
 	 crypto isakmp policy 10
 	 encr aes
 	 authentication pre-share
@@ -34,6 +34,7 @@
 	interface Tunnel14
   tunnel protection ipsec profile PROTECT-GRE
 	 !
+	 
 
 ---
 #### R15
