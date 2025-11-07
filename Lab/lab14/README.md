@@ -58,19 +58,30 @@
 
 
 ---
-#### 
+#### Настроите DMVPN поверх IPSec между Москва и Чокурдах, Лабытнанги.
 
+На R14 и R15 нужно добавить строку с адресом R28 и R27 в политику.
+
+#### R27
+
+ crypto isakmp policy 10
+	 encr aes
+	 authentication pre-share
+	 group 2
+	 crypto isakmp key AAAAAAA)) address 10.10.214.2
+	 crypto isakmp key AAAAAAA)) address 10.10.215.2
+	 
+	 crypto ipsec transform-set GRE-IPSEC esp-3des esp-sha-hmac
+	 mode transport
+	 
+	 crypto ipsec profile PROTECT-GRE
+	 set transform-set GRE-IPSEC
+	 !
 
 
 
 ---
-#### R18
-
-
-
-
----
-#### R18
+#### R28
 
 
 
