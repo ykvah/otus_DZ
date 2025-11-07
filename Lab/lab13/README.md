@@ -56,7 +56,7 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 	 R18(config-if)#tunnel source 10.10.126.2
 	 R18(config-if)#tunnel destination 10.10.214.2
 	 !
-	 !
+	 
 
 
 ---
