@@ -60,11 +60,7 @@
 
 #### R27
 
-
-Text).
-
-  !
-  crypto isakmp policy 10
+ 	 crypto isakmp policy 10
 	 encr aes
 	 authentication pre-share
 	 group 2
