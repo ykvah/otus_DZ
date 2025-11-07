@@ -60,7 +60,11 @@ crypto isakmp policy 10
 
 #### R27
 
- crypto isakmp policy 10
+
+Text).
+
+  !
+  crypto isakmp policy 10
 	 encr aes
 	 authentication pre-share
 	 group 2
@@ -73,8 +77,6 @@ crypto isakmp policy 10
 	 crypto ipsec profile PROTECT-GRE
 	 set transform-set GRE-IPSEC
 	 !
-
-
 
 ---
 #### R28
