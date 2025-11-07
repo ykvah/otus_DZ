@@ -111,10 +111,40 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 
 
 ---
-####
+
+
+
+     !
+	 R28(config)##interface Tunne10
+	 R28(config-if)#ip address 10.10.10.28 255.255.255.0
+	 R28(config-if)#no ip redirects
+	 R28(config-if)#ip mtu 1400
+	 R28(config-if)#ip tcp adjust-mss 1360
+	 R28(config-if)#ip nhrp network-id 1
+	 R28(config-if)#ip nhrp map multicast 10.10.215.2
+	 R28(config-if)#ip nhrp map 10.10.10.15 10.10.215.2
+	 R28(config-if)#ip nhrp nhs 10.10.10.15
+	 R28(config-if)#tunnel source 10.10.68.1
+	 R28(config-if)#tunnel mode gre multipoint
+	 R28(config-if)#tunnel key 10
+	 R28(config-if)exit	 
+	 R28(config)#interface Tunnel11
+	 R28(config-if)#ip address 10.10.11.28 255.255.255.0
+	 R28(config-if)#no ip redirects
+	 R28(config-if)#ip mtu 1400
+	 R28(config-if)#ip nhrp map multicast 10.10.214.2
+	 R28(config-if)#ip nhrp map 10.10.11.14 10.10.214.2
+	 R28(config-if)#ip nhrp network-id 11
+	 R28(config-if)#ip nhrp nhs 10.10.11.14
+	 R28(config-if)#ip tcp adjust-mss 1360
+	 R28(config-if)#tunnel source 10.10.58.1
+	 R28(config-if)#tunnel mode gre multipoint
+	 R28(config-if)#tunnel key 11
+	 !
+
 
 
 
 ---
-####
+
 
