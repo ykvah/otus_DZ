@@ -18,12 +18,22 @@
 
 Mежду роутером R15 Москва и R18 С.-Петербург
 
-возьмём для GRE туннеля адрес 10.10.10.10 255.255.255.0.
+возьмём для GRE туннеля адреса 10.10.х.х 255.255.255.0.
+
+     !
+	 R14(config)##interface Tunnel14
+	 R14(config-if)#ip address 10.10.14.14 255.255.255.0
+	 R14(config-if)#ip mtu 1400
+	 R14(config-if)#ip tcp adjust-mss 1360
+	 R14(config-if)#tunnel source 10.10.214.2
+	 R14(config-if)#tunnel destination 10.10.126.2
+	  !
+	 
 
 
      !
-	 R15(config)##interface Tunnel1
-	 R15(config-if)#ip address 10.10.1.115 255.255.255.0
+	 R15(config)##interface Tunnel15
+	 R15(config-if)#ip address 10.10.15.15 255.255.255.0
 	 R15(config-if)#ip mtu 1400
 	 R15(config-if)#ip tcp adjust-mss 1360
 	 R15(config-if)#tunnel source 10.10.215.2
@@ -32,12 +42,20 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 
 
      !
-	 R18(config)##interface Tunnel1
-	 R18(config-if)#ip address 10.10.1.18 255.255.255.0
+	 R18(config)#interface Tunnel15
+	 R18(config-if)#ip address 10.10.15.18 255.255.255.0
 	 R18(config-if)#ip mtu 1400
 	 R18(config-if)#ip tcp adjust-mss 1360
 	 R18(config-if)#tunnel source 10.10.124.2
 	 R18(config-if)#tunnel destination 10.10.215.2
+	 R18(config)#exit
+	 R18(config)#interface Tunnel14
+	 R18(config-if)#ip address 10.10.14.18 255.255.255.0
+	 R18(config-if)#ip mtu 1400
+	 R18(config-if)#ip tcp adjust-mss 1360
+	 R18(config-if)#tunnel source 10.10.126.2
+	 R18(config-if)#tunnel destination 10.10.214.2
+	 !
 	 !
 
 
