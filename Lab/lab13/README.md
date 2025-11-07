@@ -46,9 +46,9 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 
      !
 	 	 
-	 R14(config)#interface Tunnel10
+	 R14(config)#interface Tunnel11
 	 R14(config-if)#description DMVPN
-	 R14(config-if)#ip address 10.10.10.10 255.255.255.0
+	 R14(config-if)#ip address 10.10.11.14 255.255.255.0
 	 R14(config-if)#ip mtu 1400
 	 R14(config-if)#ip nhrp map multicast dynamic
 	 R14(config-if)#ip nhrp network-id 11
@@ -64,7 +64,7 @@ Mежду роутером R15 Москва и R18 С.-Петербург
  
 	 R15(config)#interface Tunnel10
 	 R15(config-if)#description DMVPN
-	 R15(config-if)#ip address 10.10.10.10 255.255.255.0
+	 R15(config-if)#ip address 10.10.10.15 255.255.255.0
 	 R15(config-if)#ip mtu 1400
 	 R15(config-if)#ip nhrp map multicast dynamic
 	 R15(config-if)#ip nhrp network-id 1
@@ -78,22 +78,36 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 ---
 
      !
-	 R27(config)##interface Tunnel10
-	 R27(config-if)#ip address 10.10.10.10 255.255.255.0
+	 R27(config)##interface Tunne10
+	 R27(config-if)#ip address 10.10.10.27 255.255.255.0
+	 R27(config-if)#no ip redirects
 	 R27(config-if)#ip mtu 1400
 	 R27(config-if)#ip tcp adjust-mss 1360
-	 R27(config-if)# tunnel source 10.10.57.2
-	 R27(config-if)#tunnel destination 10.10.214.2
-	 R14(config-if)exit
-	 R14(config)#interface t10
-	 R14(config-if)#tunnel mode gre multipoint
-	 Tunnel set mode failed. p2mp tunnels cannot have a tunnel destination.
-	 R14(config-if)#no tunnel destination 10.10.57.2
-	 R14(config-if)#tunnel mode gre multipoint
-	 R14(config-if)#ip nhrp network-id 10
-	 R14(config-if)#ip nhrp map multicast dynamic
-	 
+	 R27(config-if)#ip nhrp network-id 1
+	 R27(config-if)#ip nhrp map multicast 10.10.215.2
+	 R27(config-if)#ip nhrp map 10.10.10.15 10.10.215.2
+	 R27(config-if)#ip nhrp nhs 10.10.10.15
+	 R27(config-if)#tunnel source 10.10.57.2
+	 R27(config-if)#tunnel mode gre multipoint
+	 R27(config-if)#tunnel key 10
+	 R27(config-if)exit	 
+	 R27(config)#interface Tunnel11
+	 R27(config-if)#ip address 10.10.11.27 255.255.255.0
+	 R27(config-if)#no ip redirects
+	 R27(config-if)#ip mtu 1400
+	 R27(config-if)#ip nhrp map multicast 10.10.214.2
+	 R27(config-if)#ip nhrp map 10.10.11.14 10.10.214.2
+	 R27(config-if)#ip nhrp network-id 11
+	 R27(config-if)#ip nhrp nhs 10.10.11.14
+	 R27(config-if)#ip tcp adjust-mss 1360
+	 R27(config-if)#tunnel source 10.10.57.2
+	 R27(config-if)#tunnel mode gre multipoint
+	 R27(config-if)#tunnel key 11
 	 !
+
+
+
+
 
 
 ---
