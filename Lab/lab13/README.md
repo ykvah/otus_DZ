@@ -22,21 +22,21 @@ Mежду роутером R15 Москва и R18 С.-Петербург
 
 
      !
-	 R15(config)##interface Tunnel10
-	 R15(config-if)#ip address 10.10.10.10 255.255.255.0
+	 R15(config)##interface Tunnel1
+	 R15(config-if)#ip address 10.10.1.115 255.255.255.0
 	 R15(config-if)#ip mtu 1400
 	 R15(config-if)#ip tcp adjust-mss 1360
-	 R15(config-if)# tunnel source 10.10.215.2
+	 R15(config-if)#tunnel source 10.10.215.2
 	 R15(config-if)#tunnel destination 10.10.124.2
 	 !
 
 
      !
-	 R18(config)##interface Tunnel10
-	 R18(config-if)#ip address 10.10.10.10 255.255.255.0
+	 R18(config)##interface Tunnel1
+	 R18(config-if)#ip address 10.10.1.18 255.255.255.0
 	 R18(config-if)#ip mtu 1400
 	 R18(config-if)#ip tcp adjust-mss 1360
-	 R18(config-if)# tunnel source 10.10.124.2
+	 R18(config-if)#tunnel source 10.10.124.2
 	 R18(config-if)#tunnel destination 10.10.215.2
 	 !
 
